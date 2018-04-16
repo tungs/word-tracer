@@ -137,7 +137,7 @@ if (fragment) {
     var key = keyValueComponents[0];
     var values = keyValueComponents.slice(1);
     if (values.length === 0) {
-      fragmentObj.message = key;
+      fragmentObj.message = decodeURIComponent(key);
     } else {
       fragmentObj[key] = decodeURIComponent(values.join('='));
     }
