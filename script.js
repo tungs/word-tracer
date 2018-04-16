@@ -143,7 +143,7 @@ if (fragment) {
     }
   });
   if (fragmentObj.message) {
-    document.getElementById('textarea-input').value = fragmentObj.message;
+    document.getElementById('textarea-input').value = decodeURIComponent(fragmentObj.message);
   }
 }
 drawText({ text: fragmentObj.message });
